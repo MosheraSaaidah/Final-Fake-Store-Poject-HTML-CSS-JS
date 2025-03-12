@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* 
+ font-family: "Roboto", sans-serif;
+  font-family: "Dosis", sans-serif;
+  font-family: "Raleway", sans-serif;
+*/
+
+--root {
+  --main-font: "Cinzel", serif;
+  --link-font: "Poppins", sans-serif;
+  --main-color: rgb(255, 255, 255);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--main-font);
+}
+body {
+  height: 5000px;
+}
+
+/* Start loading */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.234);
+}
+.di-none {
+  display: none;
+}
+.d-none {
+  display: none;
+}
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #1a1717;
+  font-size: 7px;
+  position: relative;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+
+@keyframes bblFadInOut {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+/* End Loader */
+
+/* Start Nav bar */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgb(247, 239, 237);
+  box-shadow: 0 0 8px 3px #b6b6b6;
+  height: 80px;
+  order: 5;
+}
+
+.links,
+.icons {
+  display: flex;
+  gap: 55px;
+  padding: 30px;
+  font-size: 17px;
+  font-family: var(--link-font);
+}
+.links a {
+  color: black;
+}
+.hover-me .drop-down-mnuo {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--link-font);
+  font-size: 15px;
+  margin: 10px 0 4px 25px;
+  transition: opacity 0.8s;
+}
+.hover-me:hover .drop-down-mnuo {
+  opacity: 1;
+}
+.icons {
+  padding-bottom: 103px;
+}
+.icons i {
+  border: 1px solid rgba(0, 0, 0, 0.249);
+  padding: 10px 11px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #1a1717;
+}
+.icons a i.fa-cart-plus {
+  color: rgb(187, 43, 43);
+}
+
+/* End nav bar */
+/* Start Header */
+.header {
+  background-image: url(../img/Public/header.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+}
+.header h1 {
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 90px;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+}
+
+/* End Header */
+
+/* Start categories */
+.categories {
+  margin: 45px;
+}
+
+.categories .container .categorie > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px 2px rgb(209, 208, 209);
+  border: 2px rgba(60, 60, 58, 0) solid;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  width: 300px;
+  height: 370px;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.women img {
+  width: 260px;
+  height: 250px;
+}
+
+.jewelery img {
+  width: 260px;
+  height: 250px;
+}
+
+.electronics img {
+  width: 260px;
+  height: 250px;
+}
+.man img {
+  width: 260px;
+  height: 250px;
+}
+
+a.Shop-now,
+a.bottom-click {
+  transition: opacity 0.5s;
+}
+
+a.Shop-now {
+  display: block;
+
+  background-color: rgb(255, 212, 202);
+  position: absolute;
+  color: rgba(0, 0, 0, 0.681);
+  font-size: 20px;
+  padding: 12px 16px;
+
+  top: 120px;
+  opacity: 0;
+}
+a.bottom-click {
+  font-size: 25px;
+  font-family: var(--link-font);
+  width: 100%;
+  text-align: center;
+  position: absolute;
+
+  background-color: rgb(255, 220, 212);
+  bottom: 0px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.681);
+  padding: 18px;
+  opacity: 0;
+}
+.categorie div:hover a {
+  opacity: 1;
+}
+
+/* End  categories */
+
+/* Start womenSection  */
+
+.womenSection {
+  margin: 25px 0;
+}
+.womenSection h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  padding: 30px;
+  color: black;
+  font-family: "Cinzel", serif;
+  margin-bottom: 20px;
+}
+.womenSection .contant {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  margin: 12px 20px;
+}
+.womenSection .contant .categorie {
+  box-shadow: 0 0 8px 6px rgb(241 237 236);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  padding-bottom: 20px;
+}
+.womenSection .contant .categorie i.fa-cart-plus {
+  color: rgb(187, 43, 43);
+  margin-top: 10px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+}
+.womenSection .contant .categorie img {
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+}
+.womenSection .contant .categorie p {
+  font-size: 14px;
+  text-align: center;
+}
+.womenSection .contant .categorie .row {
+  justify-content: center;
+  gap: 5px;
+}
+/* End womenSection  */
+/* Start jewelerySection */
+.jewelerySection {
+  margin: 25px 0;
+}
+.jewelerySection h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  padding: 30px;
+  color: black;
+  font-family: "Cinzel", serif;
+  margin-bottom: 20px;
+}
+.jewelerySection .contant {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  margin: 12px 20px;
+}
+.jewelerySection .contant .categorie {
+  box-shadow: 0 0 8px 6px rgb(241 237 236);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  padding-bottom: 20px;
+}
+.jewelerySection .contant .categorie i.fa-cart-plus {
+  color: rgb(187, 43, 43);
+  margin-top: 10px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+}
+.jewelerySection .contant .categorie img {
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+}
+.jewelerySection .contant .categorie p {
+  font-size: 14px;
+  text-align: center;
+}
+.jewelerySection .contant .categorie .row {
+  justify-content: center;
+  gap: 5px;
+}
+/* End jewelerySection */
+
+/* Start electronicsSection */
+.electronicsSection {
+  margin: 25px 0;
+}
+.electronicsSection h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  padding: 30px;
+  color: black;
+  font-family: "Cinzel", serif;
+  margin-bottom: 20px;
+}
+.electronicsSection .contant {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  margin: 12px 20px;
+}
+.electronicsSection .contant .categorie {
+  box-shadow: 0 0 8px 6px rgb(241 237 236);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  padding-bottom: 20px;
+}
+.electronicsSection .contant .categorie i.fa-cart-plus {
+  color: rgb(187, 43, 43);
+  margin-top: 10px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+}
+.electronicsSection .contant .categorie img {
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+}
+.electronicsSection .contant .categorie p {
+  font-size: 14px;
+  text-align: center;
+}
+.electronicsSection .contant .categorie .row {
+  justify-content: center;
+  gap: 5px;
+}
+/* End electronicsSection */
+.newCollection {
+  height: 450px;
+  width: 100%;
+  background-color: rgb(247, 239, 237);
+}
+.newCollection h2 {
+  font-family: "Cinzel", serif;
+  font-size: 70px;
+  text-align: center;
+  color: rgb(27, 23, 23);
+  text-transform: uppercase;
+  max-width: 40px;
+  position: relative;
+  top: 24%;
+  left: 42%;
+}
+/* Start menSection */
+.menSection {
+  margin: 25px 0;
+}
+.menSection h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  padding: 30px;
+  color: black;
+  font-family: "Cinzel", serif;
+  margin-bottom: 20px;
+}
+.menSection .contant {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  margin: 12px 20px;
+}
+.menSection .contant .categorie {
+  box-shadow: 0 0 8px 6px rgb(241 237 236);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  padding-bottom: 20px;
+}
+.menSection .contant .categorie i.fa-cart-plus {
+  color: rgb(187, 43, 43);
+  margin-top: 10px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+}
+.menSection .contant .categorie img {
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+}
+.menSection .contant .categorie p {
+  font-size: 14px;
+  text-align: center;
+}
+.menSection .contant .categorie .row {
+  justify-content: center;
+  gap: 5px;
+}
+/* End menSection*/
+
+/* Start Bg-section */
+.bg-section {
+  background-image: url(../img/Public/section_bg.png);
+  background-size: 95%;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-section h2 {
+  color: white;
+  font-family: "Cinzel", serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  max-width: 510px;
+  position: relative;
+  top: 35%;
+  left: 35%;
+  font-weight: 700;
+}
+/* End Bg-section */
+
+/* Start all prodects */
+.allProducts {
+  padding: 25px;
+}
+.allProducts .row {
+  justify-content: flex-start;
+}
+.allProducts h2 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Cinzel", serif;
+}
+.allProducts .container .row .product {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px 5px rgba(232, 232, 232, 0.925);
+  margin: 20px;
+  padding: 10px;
+  gap: 25px;
+}
+.allProducts .container .row .product h3 {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Cinzel", serif;
+}
+.allProducts .container .row .product img {
+  width: 25%;
+  height: 25%;
+}
+
+.allProducts .container .row .product p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.allProducts .container .row .product a i.fa-cart-plus {
+  color: rgb(187, 43, 43);
+  font-size: 25px;
+}
+/* End All Products */
+
+/* Start Modal */
+.my-modal {
+  background-color: rgba(0, 0, 0, 0.393);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.my-modal .img {
+  background-color: #fff;
+  padding: 50px 66px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 5px rgba(128, 127, 127, 0.548);
+  position: relative;
+}
+
+.my-modal img {
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+}
+
+.left-btn,
+.right-btn,
+.close-btn {
+  position: absolute;
+  background-color: rgba(134, 131, 131, 0.168);
+  color: rgb(25, 25, 32);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.left-btn {
+  left: 10px;
+  top: 50%;
+}
+.close-btn {
+  top: 10px;
+  right: 10px;
+}
+.right-btn {
+  right: 10px;
+  top: 50%;
+}
+
+.d-none {
+  display: none;
+}
+
+.categorie img,
+.close-btn,
+.left-btn,
+.right-btn {
+  cursor: pointer;
+}
+/* End Modal */
+
+/* Start pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.pagination button {
+  background-color: transparent;
+  border: 1px solid rgb(247, 239, 237);
+  cursor: pointer;
+  padding: 11px;
+  background-color: rgb(247, 239, 237) ddd;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+}
+
+.pagination-btn.active {
+  background-color: #c33;
+  color: rgb(16, 17, 15);
+  font-weight: 700;
+}
+/* End pagination */
